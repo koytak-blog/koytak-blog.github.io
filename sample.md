@@ -6,4 +6,4 @@ categories: foo bar
 ---
 
 これはサンプルです。
-
+修正-1
