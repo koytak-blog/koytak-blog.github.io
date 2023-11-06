@@ -259,8 +259,8 @@
   h1 {
     @include relative-font-size(2);
 
-    margin-top: calc($spacing-unit*2);
-    margin-bottom: calc($spacing-unit);
+    margin-top: calc(#{$spacing-unit}*2);
+    margin-bottom: calc(#{$spacing-unit});
 
     padding-top: 4px;
     padding-left: 10px;
@@ -277,8 +277,8 @@
   h2 {
     @include relative-font-size(1.80);
 
-    margin-top: calc($spacing-unit*1.5);
-    margin-bottom: calc($spacing-unit);
+    margin-top: calc(#{$spacing-unit}*1.5);
+    margin-bottom: calc(#{$spacing-unit});
     border-bottom: 2px #444444 solid;
 
     @include media-query($on-laptop) {
@@ -289,8 +289,8 @@
   h3 {
     @include relative-font-size(1.625);
 
-    margin-top: calc($spacing-unit);
-    margin-bottom: calc($spacing-unit/2);
+    margin-top: calc(#{$spacing-unit});
+    margin-bottom: calc(#{$spacing-unit}/2);
     border-bottom: 1px #888888 dashed;
 
     @include media-query($on-laptop) {
@@ -301,8 +301,8 @@
   h4 {
     @include relative-font-size(1.25);
 
-    margin-top: calc($spacing-unit);
-    margin-bottom: calc($spacing-unit/4);
+    margin-top: calc(#{$spacing-unit});
+    margin-bottom: calc(#{$spacing-unit}/4);
 //    font-weight: bold;
 
     @include media-query($on-laptop) {
