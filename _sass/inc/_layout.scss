@@ -4,7 +4,7 @@
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
-  min-height: calc($spacing-unit * 1.865);
+  min-height: calc(#{$spacing-unit} * 1.865);
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -49,7 +49,7 @@
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
-    right: calc($spacing-unit / 2);
+    right: calc(#{$spacing-unit} / 2);
     background-color: $background-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
@@ -112,7 +112,7 @@
 
 .footer-heading {
   @include relative-font-size(1.125);
-  margin-bottom: calc($spacing-unit / 2);
+  margin-bottom: calc(#{$spacing-unit} / 2);
 }
 
 .contact-list,
@@ -124,14 +124,14 @@
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
   color: $grey-color;
-  margin-left: calc(($spacing-unit * -1) / 2);
+  margin-left: calc((#{$spacing-unit} * -1) / 2);
   @extend %clearfix;
 }
 
 .footer-col {
   float: left;
-  margin-bottom: calc($spacing-unit / 2);
-  padding-left: calc($spacing-unit / 2);
+  margin-bottom: calc(#{$spacing-unit} / 2);
+  padding-left: calc(#{$spacing-unit} / 2);
 }
 
 .footer-col-1 {
@@ -188,7 +188,7 @@
   flex: 1;
   margin-right: auto;
   margin-left: auto;
-  width: calc( $content-width + 350px )
+  width: calc( #{$content-width} + 350px )
 }
 
 .page-heading {
@@ -260,13 +260,13 @@
     @include relative-font-size(2);
 
     margin-top: calc($spacing-unit*2);
-    margin-bottom: calc($spacing-unit*2);
+    margin-bottom: calc($spacing-unit);
 
     padding-top: 4px;
     padding-left: 10px;
     border-left: 8px #556b2f solid;
     border-bottom: 2px #556b2f solid;
-    color: #556b2f;
+    //color: #556b2f;
     //background-color: rgba(85, 130, 50, .2);
 
     @include media-query($on-laptop) {
