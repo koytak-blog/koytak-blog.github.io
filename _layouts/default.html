@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    
+    <main class="page-content" aria-label="Content">
+      <div>
+	{%- if page.navtbl -%}
+	<div class="page-nav">
+	  <p/>
+	  <div>
+	  {%- include_relative {{ page.navtbl }} -%}
+	  </div>
+	</div>
+	{%- endif -%}
+	
+	<div class="wrapper">
+          {{ content }}
+	</div>
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
