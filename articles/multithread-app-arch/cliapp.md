@@ -76,20 +76,28 @@ date: 2023/08/17
 
 # 非同期処理化
 
-C# で非同期処理を実装する為のデザインパターンは、歴史と共に幾つかの方法が用意されてきました。具体的には以下のデザインパターンです。
--  [TAP (Task-based Asynchronous Pattern)](https://learn.microsoft.com/ja-jp/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
--  [EAP (Event-based Asynchronous Pattern)](https://learn.microsoft.com/ja-jp/dotnet/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap)
+C# で非同期処理を実装する時のデザインパターンは、歴史と共に幾つかの方法が提供されてきました。具体的には以下のデザインパターンです。
 -  [APM (Asynchronous Programming Model)](https://learn.microsoft.com/ja-jp/dotnet/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm)
+-  [EAP (Event-based Asynchronous Pattern)](https://learn.microsoft.com/ja-jp/dotnet/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap)
+-  [TAP (Task-based Asynchronous Pattern)](https://learn.microsoft.com/ja-jp/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
 -  [async/await](https://learn.microsoft.com/ja-jp/dotnet/csharp/asynchronous-programming/)
 
-他の言語やランタイムでも似た様なデザインパターンが提供されていると思います。非同期処理を学習する上で、これら先人達の工夫の結晶であるデザインパターンを学習する事は良い選択肢です。
-しかし、デザインパターンの勉強から入ってしまうと、デザインパターンそのものの勉強になってしまい、何の為にこのようなデザインになっているかなど、その背景の知識が見過されがちになるような気がします。
+他の言語やランタイムでも同様に何かしらのデザインパターンやそのライブラリが提供されていると思います。
+非同期処理を学習する上で、これら先人達の工夫の結晶であるデザインパターンを学習する事は凄く勉強になります。
+しかし、本記事では、便利な方法に最初から頼るのではなく、より低レベルでベタな方法から順に学習しようと思います。
 
-そこで、ここではもう少し低レベルな（基礎的な）部分から話をしたいと思います。
+非同期処理を理解する上では、以下の３点について理解する事がポイントです。
+1. スレッドの起動方法（バックグラウンドスレッドをどうやって作成するか）
+1. スレッドの待機方法（バックグラウンドスレッドの終了をどうやって検知するか）
+1. 実行結果の取得方法（バックグラウンドスレッドの処理結果をどこにどうやって反映させるか）
+
+## スレッドの起動方法
 
 
-## 終了の待ち合わせ
-## 
+
+
+## スレッドの待機方法
+## 実行結果の取得方法
 
 # その他の検討ポイント
 ## 排他制御の設計
