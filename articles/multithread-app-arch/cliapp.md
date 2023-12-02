@@ -74,29 +74,6 @@ date: 2023/08/17
 
 対話型アプリでマルチスレッドを利用する主な目的は、この非同期化によるユーザビリティの改善にあります。しかし、非同期処理を実装する事は、いうほど簡単な作業ではありません。幾つかの考慮点がありますので、それらを順を追って見て行きましょう。
 
-# 非同期処理化
-
-非同期処理を実装する時のデザインパターンは、歴史と共に幾つかの方法が提供されてきました。C# では以下のデザインパターンがあります。ちなみに、APM と EAP は古い方法なので、現在、推奨されるデザインパターンは TAP と async/await です。
--  [APM (Asynchronous Programming Model)](https://learn.microsoft.com/ja-jp/dotnet/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm)
--  [EAP (Event-based Asynchronous Pattern)](https://learn.microsoft.com/ja-jp/dotnet/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap)
--  [TAP (Task-based Asynchronous Pattern)](https://learn.microsoft.com/ja-jp/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
--  [async/await](https://learn.microsoft.com/ja-jp/dotnet/csharp/asynchronous-programming/)
-
-他の言語やランタイムでも同様に何かしらのデザインパターンやそのライブラリが提供されていると思います。
-非同期処理を学習する上で、これら先人達の工夫の結晶であるデザインパターンを学習する事は凄く勉強になります。
-
-一方で、最初から便利な方法に頼ると、本質の部分が見えなくなってしまうリスクがありますので、本記事では、敢えて言語やライブラリに依存しない基本の部分に立ち返って順に学習しようと思います。
-以下の順番でみていきます。
-
-1. スレッドの起動方法（バックグラウンドスレッドにタスクをどうやって実行させるか）
-1. スレッドの待機方法（バックグラウンドスレッドの終了をどうやって検知するか）
-1. 実行結果の取得方法（バックグラウンドスレッドの処理結果をどこにどうやって取得するか）
-1. 例外のハンドリング（例外が発生したときに、どのようにハンドリングするか）
-1. スレッドの取消方法（バックグラウンドスレッドを途中でキャンセルするには）
-
-どの言語でどのライブラリを使用してプログラミングした場合でも、最初の３つの機能は、必ずなんらかの方法で実装されています。
-残りの２つについてもほとんどのライブラリで実装されていると思われます。
-
 # その他の検討ポイント
 ## 排他制御の設計
 ## UI スレッドへのポスト
