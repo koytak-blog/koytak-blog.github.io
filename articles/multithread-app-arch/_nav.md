@@ -3,6 +3,7 @@
 <p/>
 <ul>
 <li><a href="./index.html">はじめに</a></li>
+<li><a href="./mtterm.html">マルチスレッドの用語</a></li>
 <li><a href="./conapp.html">マルチスレッドの基本</a></li>
 <li><a href="./batapp.html">バッチアプリ編</a></li>
 <li><a href="./cliapp.html">対話型アプリ編</a></li>
